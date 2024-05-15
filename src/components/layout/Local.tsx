@@ -34,7 +34,7 @@ const Local = () => {
         </div>
         <div className="localDivs pl-3">
           <Whatsapp width="30" height="38" color="#4F4F3E" />
-          <address className="text-2xl not-italic">67 4042-9082</address>
+          <p className="text-2xl not-italic">67 4042-9082</p>
         </div>
         <div className="localDivs pl-3">
 
