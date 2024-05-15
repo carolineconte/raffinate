@@ -1,16 +1,13 @@
 'use client'
 import Image from 'next/image'
-import Link from 'next/link'
 import React, { useState } from 'react'
 //COMPONENTES
 import Menu from '../icons/Menu'
 
-type Props = {}
 
-const Navbar = (props: Props) => {
+const Navbar = () => {
 
   const [isNavOpen, setIsNavOpen] = useState(false)
-
   const links = [
     {
       text: 'Sobre nós',
@@ -46,7 +43,7 @@ const Navbar = (props: Props) => {
         <Image src='/LogoMenu.png' quality={95} height={50} width={50}
           alt='Logo da clinica raffinate'
         />
-        <button onClick={() => setIsNavOpen(!isNavOpen)}><Menu /></button>
+        <button aria-label='abrir menu' onClick={() => setIsNavOpen(!isNavOpen)}><Menu /></button>
       </div>
 
       <nav className={`${isNavOpen ? 'stick right-0 left-0' : 'hidden'}  sm:block sm:grow transition-all`}>
