@@ -53,7 +53,7 @@ const Navbar = (props: Props) => {
         <ul className='border-t border-dark-charcoal flex flex-col sm:flex-row justify-evenly items-center sm:border-transparent'>
           {links.map(item =>
             <li key={item.href}  onClick={() => setIsNavOpen(!isNavOpen)}
-              className='text-center border-b border-dark-charcoal font-bold text-dark-charcoal flex
+              className='text-center w-full border-b border-dark-charcoal font-bold text-dark-charcoal flex
               sm:border-transparent lg:font-semibold  hover:bg-earth-brown/50 sm:hover:bg-[#AEAEA6]'>
               <a href={item.href} aria-label={item.label}
               className='border-b-2 p-2 border-transparent transition-all w-[100%] cursor-pointer grow
