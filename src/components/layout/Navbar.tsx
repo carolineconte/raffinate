@@ -49,17 +49,17 @@ const Navbar = (props: Props) => {
         <button onClick={() => setIsNavOpen(!isNavOpen)}><Menu /></button>
       </div>
 
-      <nav className={`${isNavOpen ? 'stick right-0 left-0 bg-white-mist' : 'hidden'}  sm:block sm:grow transition-all`}>
-        <ul className='w-full p-0 border-t border-dark-charcoal sm:flex sm:border-transparent'>
+      <nav className={`${isNavOpen ? 'stick right-0 left-0' : 'hidden'}  sm:block sm:grow transition-all`}>
+        <ul className='border-t border-dark-charcoal flex flex-col sm:flex-row justify-evenly items-center sm:border-transparent'>
           {links.map(item =>
-            <li key={item.href} onClick={() => setIsNavOpen(!isNavOpen)}
-              className='w-full cursor-pointer text-center border-b border-dark-charcoal p-2 font-bold text-dark-charcoal 
-              sm:border-transparent lg:font-semibold bg-subtle-gray hover:bg-earth-brown/50 sm:hover:bg-subtle-gray'>
-              <Link href={item.href} aria-label={item.label} 
-              className='border-b-2 px-2 border-transparent transition-all 
+            <li key={item.href}  onClick={() => setIsNavOpen(!isNavOpen)}
+              className='text-center border-b border-dark-charcoal font-bold text-dark-charcoal flex
+              sm:border-transparent lg:font-semibold  hover:bg-earth-brown/50 sm:hover:bg-[#AEAEA6]'>
+              <a href={item.href} aria-label={item.label}
+              className='border-b-2 p-2 border-transparent transition-all w-[100%] cursor-pointer grow
               sm:hover:border-dark-charcoal lg:text-xl'>
                 {item.text}
-              </Link>
+              </a>
             </li>
           )}
         </ul>

@@ -18,7 +18,7 @@ const Local = () => {
   return (
     <section className="md:grid md:grid-cols-2 md:gap-5 max-w-[1200px] mx-auto scroll-mt-20">
 
-      <div className="mx-10 sm:mx-0 m-5 p-10 bg-white-mist rounded-xl flex flex-col justify-evenly overflow-hidden">
+      <div className="mx-5 sm:mx-0 m-5 p-10 bg-white-mist rounded-xl flex flex-col justify-evenly overflow-hidden">
         <div className="w-full text-center">
           <p className="-mb-8">Clínica odontológica em</p>
           <h1 className="mt-5 font-light sm:tracking-widest text-[2em] sm:mx-auto">
@@ -29,7 +29,7 @@ const Local = () => {
         <div className="localDivs">
           <Location />
           <address className="text-2xl not-italic">
-            Av Manoel da Costa Lima, 1783 - Vila Ipiranga
+            Av Manoel da Costa Lima, 1783 <br/> Vila Ipiranga
           </address>
         </div>
         <div className="localDivs pl-3">
@@ -66,7 +66,7 @@ const Local = () => {
         </div>
       </div>
 
-      <div className="mx-10 sm:mx-0 my-5 h-[100%]">
+      <div className="mx-5 sm:mx-0 my-5 h-[100%]">
         <Carousel>
           <CarouselContent>
             {cards.map((item, i) =>
