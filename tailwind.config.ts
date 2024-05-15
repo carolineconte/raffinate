@@ -18,6 +18,8 @@ const config: Config = {
       'blue-black': '#171A26',
       'dark-charcoal': '#22221B',
       'transparent': 'transparent',
+      'green-700':'#4d7c0f',
+      'red-700':'#dc2626',
     },
     extend:{
       boxShadow: {

@@ -9,7 +9,7 @@ type Props = {}
 
 const Navbar = (props: Props) => {
 
-  const [isOpen, setIsOpen] = useState(false)
+  const [isNavOpen, setIsNavOpen] = useState(false)
 
   const links = [
     {
@@ -39,7 +39,6 @@ const Navbar = (props: Props) => {
     },
   ]
 
-
   return (
     <header
       className='bg-white-mist/55 w-full sm:flex items-center'>
@@ -48,14 +47,17 @@ const Navbar = (props: Props) => {
           alt='Logo da clinica raffinate'
           className='sm:hidden'
         />
-        <button className='sm:hidden' onClick={() => setIsOpen(!isOpen)}><Menu /></button>
+        <button className='sm:hidden' onClick={() => setIsNavOpen(!isNavOpen)}><Menu /></button>
       </div>
-      <nav className={`${isOpen ? 'fixed right-0 left-0 bg-white-mist' : 'hidden'}  sm:block sm:grow transition-all`}>
+      <nav className={`${isNavOpen ? 'fixed right-0 left-0 bg-white-mist' : 'hidden'}  sm:block sm:grow transition-all`}>
         <ul className='w-full p-0 border-t border-dark-charcoal sm:flex sm:border-transparent'>
           {links.map(item =>
             <li key={item.href}
-              className='w-full text-center border-b border-dark-charcoal p-2 font-bold text-dark-charcoal sm:border-transparent'>
-              <Link href={item.href} aria-label={item.label} className='border-b-2 px-2 border-transparent transition-all sm:hover:border-dark-charcoal'>
+              className='w-full text-center border-b border-dark-charcoal p-2 font-bold text-dark-charcoal 
+              sm:border-transparent lg:font-semibold'>
+              <Link href={item.href} aria-label={item.label} 
+              className='border-b-2 px-2 border-transparent transition-all 
+              sm:hover:border-dark-charcoal lg:text-xl'>
                 {item.text}
               </Link>
             </li>

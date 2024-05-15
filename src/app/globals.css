@@ -10,3 +10,11 @@
 body{
   @apply bg-dark-olive;
 }
+
+.flex-between-center{
+  @apply flex justify-between items-center;
+}
+
+.localDivs{
+  @apply flex items-center gap-3 mb-5;
+}
