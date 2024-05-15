@@ -5,8 +5,8 @@ import Whatsapp from "../icons/Whatsapp"
 
 const Contato = () => {
   return (
-    <section className="py-10 flex flex-wrap justify-center items-center gap-10 bg-white-mist text-dark-olive
-    ">
+    <section id="contato" className="py-10 flex flex-wrap justify-center items-center gap-10 bg-white-mist text-dark-olive
+    scroll-mt-20">
       <div className="grow flex flex-col items-center gap-5">
         <div className="lg:mb-10">
           <h1 className="text-6xl text-center font-[rossanova] uppercase">Raffinate</h1>
@@ -42,7 +42,7 @@ const Contato = () => {
           <input type="text" className="p-2 bg-earth-brown/20 rounded w-full" />
           <label htmlFor="">Mensagem:</label>
           <textarea name="" id="" className="p-2 bg-earth-brown/20 rounded w-full"></textarea>
-          <button className="border-2 px-5 rounded">Enviar</button>
+          <button className="border-2 px-5 rounded hover:bg-dark-olive hover:text-white-mist transition-all">Enviar</button>
         </form>
       </div>
     </section>

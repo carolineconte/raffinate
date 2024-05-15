@@ -13,7 +13,7 @@ const TopPage = (props: Props) => {
   const [statusAbertura, setStatusAbertura] = useState('')
 
   useEffect(() => {
-    let agora = new Date(); // Obtém a data e hora atual
+    let agora = new Date();
     let options = { timeZone: 'America/Campo_Grande' }
 
     // Obtém as horas no fuso horário do MS
@@ -25,7 +25,16 @@ const TopPage = (props: Props) => {
     if (horasMS >= hrAbre && horasMS < hrFecha) {
       setStatusAbertura('Aberto');
     } else {
-      setStatusAbertura('Fechado');
+      let horasFaltando = 0;
+  
+      // Se a hora atual for depois do horário de fechamento, adiciona horas restantes até o horário de abertura do dia seguinte
+      if (horasMS >= hrFecha) {
+        horasFaltando = hrAbre + (24 - horasMS);
+      } else {
+        horasFaltando = hrAbre - horasMS;
+      }
+  
+      setStatusAbertura(`Fechado, abre em: ${horasFaltando} horas`);
     }
   }, []);
 
@@ -37,7 +46,7 @@ const TopPage = (props: Props) => {
         alt="Logo" className="hidden sm:block lg:w-[200px]"
       />
       <div className="flex-between-center gap-6 grow sm:justify-end group">
-        {statusAbertura && <p className={`${statusAbertura === 'Aberto' ? 'text-green-700 animate-pulse' : 'text-red-700'} font-bold `}>
+        {statusAbertura && <p className={`${statusAbertura === 'Aberto' ? 'text-green-700' : ''} font-bold `}>
           {`${statusAbertura}`}
         </p>}
         <div className="flex gap-2 items-center sm:items-end">
