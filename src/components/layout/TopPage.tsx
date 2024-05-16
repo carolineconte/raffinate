@@ -10,34 +10,6 @@ type Props = {}
 
 const TopPage = (props: Props) => {
 
-  const [statusAbertura, setStatusAbertura] = useState('')
-
-  useEffect(() => {
-    let agora = new Date();
-    let options = { timeZone: 'America/Campo_Grande' }
-
-    // Obtém as horas no fuso horário do MS
-    let horasMS = new Date(agora.toLocaleString('en-US', options)).getHours();
-    console.log(horasMS)
-    let hrAbre = 8;
-    let hrFecha = 18;
-
-    if (horasMS >= hrAbre && horasMS < hrFecha) {
-      setStatusAbertura('Aberto');
-    } else {
-      let horasFaltando = 0;
-  
-      // Se a hora atual for depois do horário de fechamento, adiciona horas restantes até o horário de abertura do dia seguinte
-      if (horasMS >= hrFecha) {
-        horasFaltando = hrAbre + (24 - horasMS);
-      } else {
-        horasFaltando = hrAbre - horasMS;
-      }
-  
-      setStatusAbertura(`Fechado, abre em: ${horasFaltando} horas`);
-    }
-  }, []);
-
   return (
     <section className="text-white w-full flex-between-center flex-wrap gap-1 text-[.7em] p-2 
     sm:px-12 sm:py-3 sm:relative lg:text-[1.1em]">
@@ -46,9 +18,7 @@ const TopPage = (props: Props) => {
         alt="Logo" className="hidden sm:block lg:w-[200px]"
       />
       <div className="flex-between-center gap-6 grow sm:justify-end group">
-        {statusAbertura && <p className={`${statusAbertura === 'Aberto' ? 'text-green-700' : ''} font-bold `}>
-          {`${statusAbertura}`}
-        </p>}
+ 
         <div className="flex gap-2 items-center sm:items-end">
           <Phone className='hidden sm:block group-hover:animate-pulse' />
           <Link href={''} aria-label="Ligar para clinica">

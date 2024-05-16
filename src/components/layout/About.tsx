@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const About = () => {
   return (
-    <section id='sobre' className='flex justify-between bg-white-mist/70 md:max-h-[90vh] scroll-mt-20'>
+    <section id='sobre' className='2xl:px-60 mx-auto flex justify-between bg-white-mist/70 md:max-h-[90vh] scroll-mt-20'>
      
       <Image src='/about.jpg' height={200} width={200} alt=''
         className='hidden md:block w-full'

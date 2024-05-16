@@ -16,7 +16,7 @@ export default function Home() {
       <TopPage />
       <Navbar />
       <HeroBanner />
-      <main className="min-h-[200vh]">
+      <main className="">
         <Especialidades />
         <About />
         <Diferenciais />

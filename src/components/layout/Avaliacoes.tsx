@@ -26,9 +26,10 @@ const Avaliacoes = () => {
     },
   ]
   return (
-    <section id="depoimentos" className="pt-3 pb-10 -mt-12 bg-white-mist/70 w-full scroll-mt-20">
+    <section id="depoimentos" className="pt-3 pb-10 -mt-12 bg-white-mist/70 
+    w-full scroll-mt-20">
       <SectionTitle title='O que dizem nossos clientes' txtColor='dark-olive' />
-      <Carousel className="mx-10 md:mx-24 sm:max-w-full max-w-[1200px]">
+      <Carousel className="2xl:mx-48 mx-10 md:mx-24 sm:max-w-full max-w-[1200px]">
         <CarouselContent >
           {cards.map((item, i) =>
             <CarouselItem key={i} className="flex md:basis-1/2">

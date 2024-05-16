@@ -36,13 +36,13 @@ const HeroBanner = (props: Props) => {
         />
       </div>
       <div className='flex gap-[10px] m-7 hero-icons'>
-        <Link href='' aria-label='Enviar mensagem Whatsapp' className='hover:scale-125'>
+        <Link href='' aria-label='Enviar mensagem Whatsapp' className='hover:scale-125 transition-all'>
           <Whatsapp height={'25'} width={'23'} color='#DED9D5' />
         </Link>
-        <Link href='' aria-label='Abrir Instagram' className='hover:scale-125'>
+        <Link href='' aria-label='Abrir Instagram' className='hover:scale-125 transition-all'>
           <Instagram height={'25'} width={'19'} color='#DED9D5' />
         </Link>
-        <Link href='' aria-label='Localizaçao' className='hover:scale-125'>
+        <Link href='' aria-label='Localizaçao' className='hover:scale-125 transition-all'>
           <MapsArrow height={'25'} width={'20'} color='#DED9D5' />
         </Link>
       </div>
