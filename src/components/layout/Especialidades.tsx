@@ -16,7 +16,7 @@ const Especialidades = (props: Props) => {
   const especialidades = [
     {
       title: 'Clínica Geral',
-      body: 'Consultas de rotina e exames para avaliar a saúde bucal geral, diagnóstico e tratamento de problemas dentários básicos.'
+      body: 'Check-up Dentário e exames para avaliar a saúde bucal geral, diagnóstico e tratamento de problemas dentários básicos.'
     },
     {
       title: 'Tratamento de Canal',

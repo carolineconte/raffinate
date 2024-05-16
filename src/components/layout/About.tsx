@@ -21,7 +21,7 @@ const About = () => {
         </p><br />
         <p>
           Na Raffinate, entendemos que cada sorriso é único e merece cuidados personalizados.
-          Nossa equipe de profissionais altamente qualificados está comprometida em proporcionar
+          Nossa equipe de dentistas altamente qualificados está comprometida em proporcionar
           tratamentos odontológicos de última geração.
         </p><br />
         <p>

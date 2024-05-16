@@ -15,7 +15,7 @@ const Diferenciais = () => {
     },
     {
       title: 'Equipe Altamente Qualificada',
-      body: 'Nossa equipe é composta por profissionais altamente qualificados, que estão sempre atualizados com as últimas técnicas em odontologia. Estamos comprometidos em oferecer o mais alto padrão de cuidado em todas as áreas da odontologia.'
+      body: 'Nossa equipe é composta por dentistas altamente qualificados, que estão sempre atualizados com as últimas técnicas em odontologia. Estamos comprometidos em oferecer o mais alto padrão de cuidado para garantir sua saúde Bucal.'
     }
   ]
 
