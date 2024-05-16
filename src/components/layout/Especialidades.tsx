@@ -54,7 +54,7 @@ const Especialidades = (props: Props) => {
 
   return (
     <section id="tratamentos" className="py-6 mx-2">
-      <SectionTitle title='Especialidades da nossa clínica' />
+      <SectionTitle title='Especialidades da nossa clínica odontológica' />
       <Carousel className="md:mx-24 mx-auto max-w-[80%] md:max-w-full">
         <CarouselContent className="md:mx-auto md:grid md:grid-cols-2 md:gap-3 lg:grid-cols-3">
           {especialidades.map((item, i) =>

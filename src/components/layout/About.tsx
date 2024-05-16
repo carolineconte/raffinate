@@ -12,7 +12,7 @@ const About = () => {
       <div className='px-10 text-lg grow'>
         <SectionTitle title='Sobre nós' txtColor='dark-olive'/>
         <p className='font-bold'>
-          Raffinate Odontologia e Estética: O Cuidado Sofisticado para o seu
+          Raffinate Odontologia e Estética: O Cuidado Sofisticado para o seu sorriso.
         </p>
         <p>
           Bem-vindo à Raffinate Odontologia e Estética, sua nova referência em cuidados odontológicos
