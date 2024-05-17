@@ -39,7 +39,7 @@ const Navbar = () => {
   return (
     <header className='z-10 bg-[#AEAEA6] w-full sm:flex items-center sticky top-0'>
 
-      <div className='sm:hidden flex justify-between py-3 px-6'>
+      <div className='sm:hidden flex justify-between py-3 px-6 bg-[#AEAEA6]'>
         <Image src='/LogoMenu.png' quality={95} height={50} width={50}
           alt='Logo da clinica raffinate'
         />
