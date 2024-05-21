@@ -3,6 +3,7 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 //COMPONENTES
 import Menu from '../icons/Menu'
+import TopPage from './TopPage'
 
 
 const Navbar = () => {
@@ -37,30 +38,32 @@ const Navbar = () => {
   ]
 
   return (
-    <header className='z-10 bg-[#AEAEA6] w-full sm:flex items-center sticky top-0'>
+    <header className='w-full z-10 bg-[#AEAEA6] fixed top-0'>
+      <TopPage />
+      <div className=' sm:flex items-center'>
+        <div className='sm:hidden flex justify-between py-3 px-6 bg-[#AEAEA6]'>
+          <Image src='/RAFFINATE-VERDE.png' quality={95} height={50} width={150}
+            alt='Logo da clinica raffinate'
+          />
+          <button aria-label='abrir menu' onClick={() => setIsNavOpen(!isNavOpen)}><Menu /></button>
+        </div>
 
-      <div className='sm:hidden flex justify-between py-3 px-6 bg-[#AEAEA6]'>
-        <Image src='/LogoMenu.png' quality={95} height={50} width={50}
-          alt='Logo da clinica raffinate'
-        />
-        <button aria-label='abrir menu' onClick={() => setIsNavOpen(!isNavOpen)}><Menu /></button>
-      </div>
-
-      <nav className={`${isNavOpen ? 'stick right-0 left-0' : 'hidden'}  sm:block sm:grow transition-all`}>
-        <ul className='border-t border-dark-charcoal flex flex-col sm:flex-row justify-evenly items-center sm:border-transparent'>
-          {links.map(item =>
-            <li key={item.href}  onClick={() => setIsNavOpen(!isNavOpen)}
-              className='text-center w-full border-b border-dark-charcoal font-bold text-dark-charcoal flex
+        <nav className={`${isNavOpen ? 'stick right-0 left-0' : 'hidden'}  sm:block sm:grow transition-all`}>
+          <ul className='border-t border-dark-charcoal flex flex-col sm:flex-row justify-evenly items-center sm:border-transparent'>
+            {links.map(item =>
+              <li key={item.href} onClick={() => setIsNavOpen(!isNavOpen)}
+                className='text-center w-full border-b border-dark-charcoal font-bold text-dark-charcoal flex
               sm:border-transparent lg:font-semibold  hover:bg-earth-brown/50 sm:hover:bg-[#AEAEA6]'>
-              <a href={item.href} aria-label={item.label}
-              className='border-b-2 p-2 border-transparent transition-all w-[100%] cursor-pointer grow
+                <a href={item.href} aria-label={item.label}
+                  className='border-b-2 p-2 border-transparent transition-all w-[100%] cursor-pointer grow
               sm:hover:border-dark-charcoal lg:text-xl'>
-                {item.text}
-              </a>
-            </li>
-          )}
-        </ul>
-      </nav>
+                  {item.text}
+                </a>
+              </li>
+            )}
+          </ul>
+        </nav>
+      </div>
     </header>
   )
 }

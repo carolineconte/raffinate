@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const About = () => {
   return (
-    <section id='sobre' className='2xl:px-60 mx-auto flex justify-between bg-white-mist/70  scroll-mt-20'>
+    <section id='sobre' className='2xl:px-60 mx-auto flex justify-between bg-white-mist/70  scroll-mt-28'>
      
       <Image src='/about.jpg' height={200} width={200} alt=''
         className='hidden md:block w-full md:max-h-[90vh]'
@@ -12,10 +12,10 @@ const About = () => {
       <div className='px-10 text-lg grow'>
         <SectionTitle title='Sobre nós' txtColor='dark-olive'/>
         <p className='font-bold'>
-          Raffinate Odontologia e Estética: O Cuidado Sofisticado para o seu sorriso.
+          Raffinate Odontologia estética: O Cuidado Sofisticado para o seu sorriso.
         </p>
         <p>
-          Bem-vindo à Raffinate Odontologia e Estética, sua nova referência em cuidados odontológicos
+          Bem-vindo à Raffinate Odontologia estética, sua nova referência em cuidados odontológicos
           em Campo Grande! Recentemente inaugurada com uma infraestrutura de excelência, estamos
           dedicados a oferecer um serviço de qualidade excepcional em um ambiente acolhedor e moderno.
         </p><br />
@@ -25,7 +25,7 @@ const About = () => {
           tratamentos odontológicos de última geração.
         </p><br />
         <p>
-          Oferecemos uma ampla gama de serviços, incluindo consultas de prevenço, limpeza, tratamento de canal, implantes ,
+          Oferecemos uma ampla gama de serviços, incluindo consultas de prevenção, limpeza, tratamento de canal, implantes ,
           próteses personalizadas, clareamento , e muito mais. Seja qual for a sua
           necessidade, estamos aqui para ajudá-lo a alcançar e manter um sorriso saudável e radiante.
         </p><br />

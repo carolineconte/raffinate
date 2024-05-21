@@ -8,12 +8,13 @@ import HeroBanner from "@/components/layout/HeroBanner";
 import Local from "@/components/layout/Local";
 import Navbar from "@/components/layout/Navbar";
 import TopPage from "@/components/layout/TopPage";
+import { Toaster } from 'react-hot-toast'
 
 
 export default function Home() {
   return (
     <>
-      <TopPage />
+      <Toaster position='top-right' />
       <Navbar />
       <HeroBanner />
       <main className="">

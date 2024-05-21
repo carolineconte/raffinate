@@ -13,7 +13,7 @@ import { Clock } from "lucide-react";
 
 const Local = () => {
 
-  const cards = ['/hero.jpg', '/hero-pattern.jpg', '/about.jpg']
+  const cards = ['/int1.jpeg', '/int2.jpeg', '/int3.jpeg']
 
   return (
     <section className="md:grid md:grid-cols-2 md:gap-5 max-w-[1200px] mx-auto scroll-mt-20">
@@ -29,7 +29,7 @@ const Local = () => {
         <div className="localDivs">
           <Location />
           <address className="text-2xl not-italic">
-            Av Manoel da Costa Lima, 1783 <br/> Vila Ipiranga
+            Av Manoel da Costa Lima, 1783 <br /> Vila Ipiranga
           </address>
         </div>
         <div className="localDivs pl-3">
@@ -62,7 +62,9 @@ const Local = () => {
         </div>
         <div>
           <strong className="border-b pr-3">Responsável Técnico:</strong>
-          <p>Dra. xxxxxx xxx <br />CRO xxxx</p>
+          <p>Dra. Rhayane Conde
+            {/* <br />CRO xxxx */}
+          </p>
         </div>
       </div>
 
