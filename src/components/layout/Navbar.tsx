@@ -42,7 +42,7 @@ const Navbar = () => {
       <TopPage />
       <div className=' sm:flex items-center'>
         <div className='sm:hidden flex justify-between py-3 px-6 bg-[#AEAEA6]'>
-          <Image src='/RAFFINATE-VERDE.png' quality={95} height={50} width={150}
+          <Image src='/logoBold.png' quality={95} height={50} width={150}
             alt='Logo da clinica raffinate'
           />
           <button aria-label='abrir menu' onClick={() => setIsNavOpen(!isNavOpen)}><Menu /></button>
