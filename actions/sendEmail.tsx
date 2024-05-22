@@ -1,6 +1,5 @@
 'use server'
 import React from 'react'; // Ensure React is imported
-import { error } from "console"
 import { Resend } from "resend"
 import { renderToString } from 'react-dom/server';
 import { EmailTemplate } from '@/components/email-template';
