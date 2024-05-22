@@ -12,25 +12,28 @@ const Avaliacoes = () => {
 
   const cards = [
     {
-      name: 'nome',
-      text: 'ed not only five centuries, but also the leap into electronic typesetting, remaining essentia'
+      name: 'Carolina Viana',
+      text: 'Gostaria de agradeçer a Dra Rhayane pelo atendimento e paciência. A gente se sente acolhida.E a Fernanda tambem por nos tranquilizar sempre...'
+    },
+    {
+      name: 'Augusto',
+      text: 'Dra muito cuidadosa para o paciente não sentir dor,'
+    },
+    {
+      name: 'Carolina Viana',
+      text: 'Dr Rodrigo super competente e ágil na hora de colocar o aparelho. Amei todo o atendimento da clinica.'
     }, {
-      name: 'nome',
-      text: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.'
-    }, {
-      name: 'Lorem Ipsum',
-      text: 'The standard chunk of  used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.'
-    }, {
-      name: 'used since',
-      text: '"Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.'
+      name: 'Carolina Viana',
+      text: 'Clínica com profissionais capacitados e muito queridos! Trabalho de excelência, super satisfeita com meu aparelho e protocolo que estamos fazendo.'
     },
   ]
+
   return (
-    <section id="depoimentos" className="pt-3 pb-10 -mt-12 bg-white-mist/70 
+    <section id="depoimentos" className="pt-10 pb-10 -mt-12 bg-white-mist/70 
     w-full scroll-mt-28">
       <SectionTitle title='O que dizem nossos clientes' txtColor='dark-olive' />
-      <Carousel className="2xl:mx-48 mx-10 md:mx-24 sm:max-w-full max-w-[1200px]">
-        <CarouselContent >
+      <Carousel className="mx-10 py-5 md:max-w-[1400px] md:mx-auto">
+        <CarouselContent  >
           {cards.map((item, i) =>
             <CarouselItem key={i} className="flex md:basis-1/2">
               <CardReview name={item.name} text={item.text} />

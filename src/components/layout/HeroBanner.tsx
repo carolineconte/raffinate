@@ -10,7 +10,7 @@ type Props = {}
 
 const HeroBanner = (props: Props) => {
   return (
-    <div className='bg-hero-pattern mt-16 p-2 bg-cover bg-right-top md:bg-center'>
+    <div className='bg-hero-pattern mt-16 p-2 bg-cover bg-right-top'>
 
       <div className='overflow-hidden sm:flex items-center justify-between max-w-[1200px] md:py-20 mx-auto'>
         <div className=' text-white	flex flex-col grow'>
@@ -32,9 +32,9 @@ const HeroBanner = (props: Props) => {
           </div>
           <PrimaryBtn />
         </div>
-        <Image src={'/hero.jpg'} width={200} height={200} alt='Equipe de dentistas'
+        {/* <Image src={'/hero.jpg'} width={200} height={200} alt='Equipe de dentistas'
           className='hidden rounded-2xl sm:block w-[350px] md:w-[450px]'
-        />
+        /> */}
       </div>
       <div className='flex gap-[10px] m-7 hero-icons'>
         <Link href='http://wa.me/556740429082' aria-label='Enviar mensagem Whatsapp'

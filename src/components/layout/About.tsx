@@ -5,12 +5,12 @@ import Image from 'next/image'
 const About = () => {
   return (
     <section id='sobre' className='2xl:px-60 mx-auto flex justify-between bg-white-mist/70  scroll-mt-28'>
-     
-      <Image src='/about.jpg' height={200} width={200} alt=''
-        className='hidden md:block w-full md:max-h-[90vh]'
-      />
+      <div className='hidden md:block w-full max-w-[100%] max-h-[70vh]'>
+        <Image src='/about.jpg' height={200} width={200} alt='Foto dentista atendendo uma criança'
+          className='w-[100%] h-[100%] object-cover object-top' />
+      </div>
       <div className='px-10 text-lg grow'>
-        <SectionTitle title='Sobre nós' txtColor='dark-olive'/>
+        <SectionTitle title='Sobre nós' txtColor='dark-olive' />
         <p className='font-bold'>
           Raffinate Odontologia estética: O Cuidado Sofisticado para o seu sorriso.
         </p>
