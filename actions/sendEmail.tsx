@@ -45,7 +45,7 @@ let data;
   try {
     data = await resend.emails.send({
       from: 'onboarding@resend.dev',
-      to: 'carolinecontee@gmail.com',
+      to: 'raffinateodontologia@gmail.com',
       subject: `Contato de ${senderName} - SITE`,
       reply_to: senderEmail as string,
       text: `Nome ${senderName} - ${message}`,
