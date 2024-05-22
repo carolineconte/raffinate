@@ -48,7 +48,7 @@ let data;
       to: 'raffinateodontologia@gmail.com',
       subject: `Contato de ${senderName} - SITE`,
       reply_to: senderEmail as string,
-      text: `Nome ${senderName} - ${message}`,
+      text: `Nome: ${senderName} - ${message}`,
     })
   } catch (error: unknown) {
     return {
