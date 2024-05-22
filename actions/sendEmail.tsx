@@ -1,9 +1,5 @@
 'use server'
-import React from 'react'; // Ensure React is imported
 import { Resend } from "resend"
-import { renderToString } from 'react-dom/server';
-import { EmailTemplate } from '@/components/email-template';
-
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
@@ -45,27 +41,19 @@ export const sendEmail = async (formData: FormData) => {
       error: 'Invalid message'
     }
   }
-
-  let data;
-
+let data;
   try {
-
-    const emailContent = renderToString(
-      <EmailTemplate firstName={senderEmail as string} email={senderEmail as string} msg={message as string} />
-    );
-
     data = await resend.emails.send({
       from: 'onboarding@resend.dev',
-      // to: 'raffinateoddontologia@gmail.com',
       to: 'carolinecontee@gmail.com',
       subject: `Contato de ${senderName} - SITE`,
       reply_to: senderEmail as string,
-      text:  emailContent,
+      text: `Nome ${senderName} - ${message}`,
     })
   } catch (error: unknown) {
     return {
       error: getErrorMessage(error)
     }
   }
-  return { data }
+  return{data}
 }
