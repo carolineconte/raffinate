@@ -10,7 +10,6 @@ import toast from 'react-hot-toast';
 import { useState } from "react";
 //Email
 import { useFormStatus } from 'react-dom';
-import { LucidePlaneTakeoff } from "lucide-react";
 
 
 const Contato = () => {
