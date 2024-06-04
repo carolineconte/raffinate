@@ -80,8 +80,8 @@ const Local = () => {
             )}
 
           </CarouselContent>
-          <CarouselPrevious position={'right-[51%] top-[95%]'} />
-          <CarouselNext position={'left-[51%] top-[95%]'} />
+          <CarouselPrevious />
+          <CarouselNext  />
         </Carousel>
       </div>
 
