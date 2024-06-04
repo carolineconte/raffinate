@@ -7,7 +7,7 @@ const Diferenciais = () => {
   const cards = [
     {
       title: 'Avaliação Gratuita',
-      body: 'Oferecemos a avaliação inicial gratuita, onde nossa equipe realiza uma análise detalhada da saúde bucal e discute quaisquer preocupações ou objetivos estéticos. Esta avaliação é uma oportunidade para conhecer nos conhecer sem compromisso.'
+      body: 'Oferecemos a avaliação inicial gratuita, onde nossa equipe realiza uma análise detalhada da saúde bucal e discute quaisquer preocupações ou objetivos estéticos. Esta avaliação é uma oportunidade para nos conhecer sem compromisso.'
     },
     {
       title: 'Atendimento Personalizado',

@@ -16,9 +16,9 @@ const Local = () => {
   const cards = ['/int1.jpeg', '/int2.jpeg', '/int3.jpeg']
 
   return (
-    <section className="md:grid md:grid-cols-2 md:gap-5 max-w-[1200px] mx-auto scroll-mt-20">
+    <section className="px-10 gap-5 md:grid md:grid-cols-2 max-w-[1200px] mx-auto scroll-mt-20">
 
-      <div className="mx-5 sm:mx-0 m-5 p-10 bg-white-mist rounded-xl flex flex-col justify-evenly overflow-hidden">
+      <div className="m-5 sm:mx-0 p-5 bg-white-mist rounded-xl flex flex-col justify-evenly overflow-hidden">
         <div className="w-full text-center">
           <p className="-mb-8">Clínica odontológica em</p>
           <h1 className="mt-5 font-light sm:tracking-widest text-[2em] sm:mx-auto">
@@ -28,8 +28,8 @@ const Local = () => {
         </div>
         <div className="localDivs">
           <Location />
-          <address className="text-2xl not-italic">
-            Av Manoel da Costa Lima, 1783 <br /> Vila Ipiranga
+          <address className="text-xl lg:text-2xl not-italic">
+            Av Manoel da Costa Lima, 1783 - Vila Ipiranga
           </address>
         </div>
         <div className="localDivs pl-3">
@@ -68,16 +68,19 @@ const Local = () => {
         </div>
       </div>
 
-      <div className="mx-5 sm:mx-0 my-5 h-[100%]">
+      <div className="my-5 h-[100%]">
         <Carousel>
           <CarouselContent>
             {cards.map((item, i) =>
-              <CarouselItem key={i}>
+              <CarouselItem key={i} className="w-full h-full">
                 <Image src={item} width={200} height={200} alt=""
                   className="w-full object-cover rounded-xl h-[100%] max-h-[600px]" />
               </CarouselItem>
             )}
+
           </CarouselContent>
+          <CarouselPrevious position={'right-[51%] top-[95%]'} />
+          <CarouselNext position={'left-[51%] top-[95%]'} />
         </Carousel>
       </div>
 
