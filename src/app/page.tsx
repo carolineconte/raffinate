@@ -7,7 +7,6 @@ import Footer from "@/components/layout/Footer";
 import HeroBanner from "@/components/layout/HeroBanner";
 import Local from "@/components/layout/Local";
 import Navbar from "@/components/layout/Navbar";
-import TopPage from "@/components/layout/TopPage";
 import { Toaster } from 'react-hot-toast'
 
 

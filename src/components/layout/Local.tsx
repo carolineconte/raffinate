@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import Whatsapp from "../icons/Whatsapp";
 import Location from "../icons/Location";
 
@@ -8,8 +10,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import Image from "next/image";
-import { Clock } from "lucide-react";
+
 
 const Local = () => {
 
