@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={publicSans.className}>{children}</body>
+        <body className={publicSans.className}>{children}</body>
     </html>
   );
 }

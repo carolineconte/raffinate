@@ -4,8 +4,8 @@ import Image from 'next/image'
 
 const About = () => {
   return (
-    <section id='sobre' className='2xl:px-60 mx-auto flex justify-between bg-white-mist/70 scroll-mt-28'>
-      <div className='hidden md:block w-full md:max-h-[80vh] max-w-[100%]'>
+    <section id='sobre' className='2xl:px-60 mx-auto flex justify-between  lg:max-h-[80vh] bg-white-mist/70 scroll-mt-28'>
+      <div className='hidden md:block w-[100%] max-h-[100%] max-w-[100%]'>
         <Image src='/about.jpg' height={200} width={200} alt='Foto dentista atendendo uma criança'
           className='w-[100%] h-[100%] object-cover object-top' />
       </div>

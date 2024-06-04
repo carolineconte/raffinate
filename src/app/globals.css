@@ -2,19 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+  font-family: 'TanMon';
+  src: url('/fonts/TANMONCHERI.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 @font-face {
   font-family: 'rossanova';
   src: url('/fonts/Rossanova-Regular.otf') format('opentype'),
 }
 
-body{
+body {
   @apply bg-dark-olive;
 }
 
-.flex-between-center{
+.flex-between-center {
   @apply flex justify-between items-center;
 }
 
-.localDivs{
-  @apply flex  gap-3 mb-5;
+.localDivs {
+  @apply flex gap-3 mb-5;
+}
+
+.BlogHero-title {
+  @apply font-[TanMon] uppercase text-[2.5em] md:text-[3.5em];
+}
+
+.formPostBlogContainer label {
+  @apply block mt-5;
+}
+.formPostBlogContainer input:not([type="file"]) {
+  @apply w-full p-1 border rounded border-ash-brown;
+}
+
+.formPostBlogContainer button {
+  @apply w-full mt-5 text-white p-1 border rounded bg-earth-brown;
+}
+
+.formAcessContainer{
+  @apply flex-grow flex flex-col justify-center bg-subtle-gray items-center h-[100vh];
+}
+
+.formAcess{
+  @apply flex flex-col gap-2 m-auto bg-dark-olive w-[95%] md:w-[600px] px-10 py-14 rounded-3xl shadow-lg;
+}
+
+.titleAcess{
+  @apply text-white/90 mb-6 uppercase text-center text-3xl;
+}
+
+.inputAcess{
+  @apply p-2 bg-subtle-gray outline-none;
+}
+
+.btnAcess{
+  @apply block mt-4 w-1/2 p-2 mx-auto text-white bg-subtle-gray/50 hover:bg-subtle-gray transition;
 }
