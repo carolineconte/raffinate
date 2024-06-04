@@ -1,5 +1,6 @@
+'use client'
 import Image from "next/image";
-
+import clipboardCopy from 'clipboard-copy';
 import Whatsapp from "../icons/Whatsapp";
 import Location from "../icons/Location";
 
@@ -7,39 +8,48 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
+  CarouselNextBottom,
+  CarouselPreviousBottom,
 } from "@/components/ui/carousel"
+import toast from "react-hot-toast";
 
 
 const Local = () => {
 
   const cards = ['/int1.jpeg', '/int2.jpeg', '/int3.jpeg']
 
-  return (
-    <section className="px-10 gap-5 md:grid md:grid-cols-2 max-w-[1200px] mx-auto scroll-mt-20">
+  const handleCopyClick = (text: string) => {
+    clipboardCopy(text);
+    toast.success('Endereço copiado!');
+  };
 
-      <div className="m-5 sm:mx-0 p-5 bg-white-mist rounded-xl flex flex-col justify-evenly overflow-hidden">
+  return (
+    <section className=" px-5 lg:px-10 gap-5 md:grid md:grid-cols-2 max-w-[1000px] mx-auto scroll-mt-20">
+
+      <div className="sm:m-5 sm:mx-0 p-5 bg-white-mist rounded-xl flex flex-col justify-evenly overflow-hidden">
         <div className="w-full text-center">
           <p className="-mb-8">Clínica odontológica em</p>
           <h1 className="mt-5 font-light sm:tracking-widest text-[2em] sm:mx-auto">
             Campo Grande
           </h1>
-          <div className="h-[5px] mb-10 -ml-10 bg-ash-brown rounded w-[100%]"></div>
+          <div className="h-[5px] mb-5 lg:mb-10 -ml-10 bg-ash-brown rounded w-[100%]"></div>
         </div>
         <div className="localDivs">
           <Location />
-          <address className="text-xl lg:text-2xl not-italic">
+          <address 
+          className="text-xl lg:text-2xl not-italic cursor-pointer"
+          onClick={() => handleCopyClick('Av Manoel da Costa Lima, 1783 - Vila Ipiranga')}
+          >
             Av Manoel da Costa Lima, 1783 - Vila Ipiranga
           </address>
         </div>
         <div className="localDivs pl-3">
-          <Whatsapp width="30" height="38" color="#4F4F3E" />
-          <p className="text-2xl not-italic">67 4042-9082</p>
+          <Whatsapp width="30" height="30" color="#4F4F3E" />
+          <p className="text-xl lg:text-2xl not-italic">67 4042-9082</p>
         </div>
         <div className="localDivs pl-3">
 
-          <table className="mt-4">
+          <table className="md:mt-4">
             <thead>
               <tr className="">
                 <th className="flex items-center gap-5 w-full"> Horários</th>
@@ -74,14 +84,14 @@ const Local = () => {
           <CarouselContent>
             {cards.map((item, i) =>
               <CarouselItem key={i} className="w-full h-full">
-                <Image src={item} width={200} height={200} alt=""
-                  className="w-full object-cover rounded-xl h-[100%] max-h-[600px]" />
+                <Image src={item} width={200} height={200} alt="Clinica Odontologica"
+                  className="w-full object-cover rounded-xl h-[100%]" />
               </CarouselItem>
             )}
 
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext  />
+          <CarouselPreviousBottom />
+          <CarouselNextBottom  />
         </Carousel>
       </div>
 

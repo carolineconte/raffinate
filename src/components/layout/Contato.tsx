@@ -8,8 +8,10 @@ import MapsArrow from "../icons/MapsArrow"
 import Whatsapp from "../icons/Whatsapp"
 import toast from 'react-hot-toast';
 import { useState } from "react";
+import clipboardCopy from 'clipboard-copy';
 //Email
 import { useFormStatus } from 'react-dom';
+
 
 
 const Contato = () => {
@@ -18,6 +20,13 @@ const Contato = () => {
   const [message, setMessage] = useState('')
 
   const { pending } = useFormStatus()
+
+
+  const handleCopyClick = (text: string) => {
+    clipboardCopy(text);
+    toast.success('Endereço copiado!');
+  };
+
 
   return (
     <section id="contato" className="py-10 flex flex-wrap justify-center items-center gap-10 bg-white-mist text-dark-olive
@@ -58,7 +67,9 @@ const Contato = () => {
           </h2>
           <div className="flex items-center">
             <Location />
-            <address className="font-semibold not-italic text-xl ">
+            <address 
+            onClick={() => handleCopyClick('Av Manoel da Costa Lima, 1783 - Vila Ipiranga')}
+            className="font-semibold not-italic text-xl cursor-pointer ">
               Av Manoel da Costa Lima, 1783 <br />
               Vila Ipiranga<br />
               Campo Grande - MS<br />
