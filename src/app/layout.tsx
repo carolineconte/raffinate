@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Public_Sans } from "next/font/google";
+
 import "./globals.css";
 
 const publicSans = Public_Sans({ subsets: ["latin"] });
@@ -16,7 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-        <body className={publicSans.className}>{children}</body>
+      <body className={publicSans.className}>
+          {children}
+      </body>
     </html>
   );
 }
